@@ -12,8 +12,8 @@ THRESHOLD = 0.5
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 # 🔴 غيّر ده لاسم الريبو بتاعك
-HF_REPO_ID = "khaled314/capsule-segmentation-model"
-HF_MODEL_FILE = "best_model.pth"
+HF_REPO_ID ="khaled314/capsule-segmentation-model"
+HF_MODEL_FILE ="best_model.pth"
 
 
 # ===============================
