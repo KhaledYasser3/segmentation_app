@@ -2,20 +2,17 @@ import streamlit as st
 import os
 from inference import load_model, run_segmentation
 
-
 st.set_page_config(page_title="Medical Segmentation", layout="centered")
 
 st.title("Capsule Endoscopy Segmentation")
 st.write("Upload an image and get the lesion mask.")
 
-# ===== Load model once =====
 @st.cache_resource
 def load_seg_model():
-    return load_model("best_model.pth")
+    return load_model()
 
 model = load_seg_model()
 
-# ===== Upload =====
 uploaded_file = st.file_uploader("Upload an image", type=["jpg", "png", "jpeg"])
 
 if uploaded_file is not None:
