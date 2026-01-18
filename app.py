@@ -1,7 +1,7 @@
 import streamlit as st
 import os
-import cv2
 from inference import load_model, run_segmentation
+
 
 st.set_page_config(page_title="Medical Segmentation", layout="centered")
 
